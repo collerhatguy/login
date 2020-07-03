@@ -39,13 +39,14 @@ function check() {
   const usernameInput = username.value;
   const passwordInput = password.value;
   accounts.forEach((account) => {
-    console.log(account)
+    console.log(account);
     if (account.username === usernameInput) {
       if (account.password === passwordInput) {
-        alert("You did it!!!!");
+        window.location.href = "reward.html";
+        return;
+      } else {
+        alert("No such account exists");
       }
-    } else {
-      alert("There is no such account.");
     }
   });
 }

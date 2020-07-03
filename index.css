@@ -16,3 +16,10 @@ header {
 a {
   color: rgb(17, 77, 228);
 }
+img {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  left: 0px;
+  right: 0px;
+}
