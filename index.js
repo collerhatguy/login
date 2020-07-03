@@ -31,14 +31,15 @@ function save() {
   localStorage.setItem(LOCAL_STORAGE_ACCOUNTS, JSON.stringify(accounts));
 }
 // box for username and password
-const username = document.getElementById("userename");
+const username = document.getElementById("username");
 const password = document.getElementById("password");
 // the form itself
 const login = document.getElementById("login");
 function check() {
-  const usernameInput = username.textContent;
-  const passwordInput = password.textContent;
+  const usernameInput = username.value;
+  const passwordInput = password.value;
   accounts.forEach((account) => {
+    console.log(account)
     if (account.username === usernameInput) {
       if (account.password === passwordInput) {
         alert("You did it!!!!");
